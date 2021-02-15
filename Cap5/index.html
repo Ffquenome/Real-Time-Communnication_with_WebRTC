@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- Leo: Titulo e fonte -->
+  <title>Realtime communication with WebRTC</title>
+
+  <link rel="stylesheet" href="/css/main.css" />
+
+</head>
+
+<body>
+
+  
+  <h1>Realtime communication with WebRTC</h1>
+
+  <!-- Leo: Temos um div que contem os videos-->
+  <div id='mainDiv'> 
+
+    <table border="1" width="100%">
+
+        <!--Pessoa 1 e 2-->
+
+        <tr>
+            <th>
+                Local video
+            </th>
+            <th>
+                Remote video
+            </th>
+        </tr>
+
+        <tr>
+
+            <td align="center">
+
+                <video id="localVideo" autoplay muted playsinline></video>
+
+            </td>
+
+            <td align="center">
+
+                <video id="remoteVideo" autoplay muted playsinline></video>
+
+            </td>
+        </tr>
+
+        <tr>
+
+            <td align="center">
+
+                <textarea rows="4" cols="60"
+
+                    id="dataChannelSend" disabled
+                    placeholder="This will be enabled once
+                    the data channel is up...">
+
+                </textarea>
+
+            </td>
+
+            <td align="center">
+
+                <textarea rows="4" cols="60"
+
+                    id="dataChannelReceive" disabled>
+
+                </textarea>
+
+            </td>
+            
+        </tr>
+
+        <tr>
+            <td align="center">
+
+                <button id="sendButton" disabled>Send</button>
+
+            </td>
+
+            <td></td>
+
+        </tr>
+
+
+        <!-- Pessoa 3 e 4 -->
+        <tr>
+            <th>
+                Remote video 2
+            </th> 
+
+            <th>
+                Remote video 3
+            </th>
+        </tr>
+
+        <tr>
+
+            <td align="center">
+
+                <video id="localVideo" autoplay muted playsinline></video>
+
+            </td>
+
+            <td align="center">
+
+                <video id="remoteVideo" autoplay muted playsinline></video>
+
+            </td>
+        </tr>
+
+        <tr>
+
+            <td align="center">
+
+                <textarea rows="4" cols="60"
+
+                    id="dataChannelReceive" disabled>
+
+                </textarea>
+
+            </td>
+
+            <td align="center">
+
+                <textarea rows="4" cols="60"
+
+                    id="dataChannelReceive" disabled>
+
+                </textarea>
+
+            </td>
+            
+        </tr>
+
+
+
+        <!-- Pessoa 5 e 6 -->
+        <tr>
+            <th>
+                Remote video 4
+            </th> 
+
+            <th>
+                Remote video 5
+            </th>
+        </tr>
+
+        <tr>
+
+            <td align="center">
+
+                <video id="localVideo" autoplay muted playsinline></video>
+
+            </td>
+
+            <td align="center">
+
+                <video id="remoteVideo" autoplay muted playsinline></video>
+
+            </td>
+        </tr>
+
+        <tr>
+
+            <td align="center">
+
+                <textarea rows="4" cols="60"
+
+                    id="dataChannelReceive" disabled>
+
+                </textarea>
+
+            </td>
+
+            <td align="center">
+
+                <textarea rows="4" cols="60"
+
+                    id="dataChannelReceive" disabled>
+
+                </textarea>
+
+            </td>
+            
+        </tr>
+
+
+    </table>
+
+</div>
+
+  <!-- This file is automatically added/served when running "node index.js". -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
